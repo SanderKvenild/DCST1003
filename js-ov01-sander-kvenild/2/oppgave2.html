@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        label {
+            width: 90px;
+            display: inline-block;
+        }
+    </style>
+    <title>Oppgave 2</title>
 </head>
 <body>
-    <h1>Title</h1>
+    <h1>Oppgave 2</h1>
     <div>
-        Fornavn: <input type="text" id="fornavn"> <br>
-        Mellomnavn: <input type="text" id="mellomnavn"> <br>
-        Etternavn: <input type="text" id="etternavn"> <br>
+        <label for="fornavn">Fornavn:</label>
+        <input type="text" id="fornavn"> <br>
+        
+        <label for="mellomnavn">Mellomnavn:</label> 
+        <input type="text" id="mellomnavn"> <br>
+
+        <label for="etternavn">Etternavn:</label>
+        <input type="text" id="etternavn"> <br>
+
         <button onclick="submit()">Submit</button>
     </div>
     <div id="navn"></div>
