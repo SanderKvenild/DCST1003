@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Title</h1>
+    <div>
+        Fornavn: <input type="text" id="fornavn" onkeyup="submit()"> <br>
+        Mellomnavn: <input type="text" id="mellomnavn" onkeyup="submit()"> <br>
+        Etternavn: <input type="text" id="etternavn" onkeyup="submit()"> <br>
+        <button onclick="submit()">Submit</button>
+    </div>
+    <div id="navn"></div>
+    <script>
+        function submit() {
+            var fornavn = document.getElementById("fornavn").value;
+            var mellom = document.getElementById("mellomnavn").value;
+            var etter = document.getElementById("etternavn").value;
+            if (mellom===null) {
+                document.getElementById("navn").textContent = fornavn + " " + etter;
+                return
+            }
+            document.getElementById("navn").textContent = fornavn + " " + mellom + " " + etter;
+        }
+    </script>
+</body>
+</html>

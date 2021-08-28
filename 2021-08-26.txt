@@ -1,0 +1,12 @@
+Bruksområder for Javascript
+    Laste ned eller opp filer (AJAX-teknologi)
+    Cookies
+    Lagre data lokalt på klienten (local storage)
+
+Ikke Javascript
+    Ingen kontakt med operativsystemet
+    Kan ikke lese eller skrive vilkårlige filer på harddisken, kopiere eller kjøre programmer
+    Bruke kamera eller mikrofon uten burker samtykke
+    Kan bare kommunisere med siden den kom fra
+
+folk.ntnu.no
