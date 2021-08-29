@@ -6,12 +6,12 @@ function calculate() {
 
     document.getElementById("halv").textContent = inputValue / 2;
     document.getElementById("dobbel").textContent = inputValue * 2;
-    document.getElementById("triple").textContent = repairFloat(inputValue * 3);
-    document.getElementById("sqr").textContent = repairFloat(inputValue ** 2);
+    document.getElementById("triple").textContent = mRound(inputValue * 3);
+    document.getElementById("sqr").textContent = mRound(inputValue ** 2);
 }
 
 // Rounds to the amount of decimals given by the constant "accuracy"
 // '+' removes trailing zeros
-function repairFloat(float) {
+function mRound(float) {
     return +float.toFixed(accuracy)
 }
