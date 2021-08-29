@@ -4,5 +4,5 @@ function run() {
     var navn = prompt("Hva er navnet ditt?"),
         farge = prompt("Hva er favorittfargen din?");
         
-        alert ("Hei, " + navn + ", liker du " + farge + " du?");
+        alert ("Hei, " + navn + ", liker du " + farge + "-farge du?");
 }
