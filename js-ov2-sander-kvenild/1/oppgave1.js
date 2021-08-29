@@ -1,7 +1,17 @@
+// How many decimals to round answer to
+const accuracy = 10;
+
 function calculate() {
-    tall = document.getElementById("tall")
-    document.getElementById("halv").textContent = tall.value / 2
-    document.getElementById("dobbel").textContent = tall.value * 2
-    document.getElementById("triple").textContent = tall.value * 3
-    document.getElementById("sqr").textContent = Math.pow(tall.value, 2)
+    var inputValue = document.getElementById("tall").value;
+
+    document.getElementById("halv").textContent = inputValue / 2;
+    document.getElementById("dobbel").textContent = inputValue * 2;
+    document.getElementById("triple").textContent = repairFloat(inputValue * 3);
+    document.getElementById("sqr").textContent = repairFloat(inputValue ** 2);
+}
+
+// Rounds to the amount of decimals given by the constant "accuracy"
+// '+' removes trailing zeros
+function repairFloat(float) {
+    return +float.toFixed(accuracy)
 }
