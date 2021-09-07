@@ -9,6 +9,6 @@ function parse() {
     } else if (input.value == "B") {
         output.textContent = "Borte";
     } else {
-        output.textContent = "Vennligst skriv in enten \"H\", \"U\", eller \"B\" i tekst feltet uten hermetegn (\")";
+        output.textContent = "Vennligst skriv in enten \"H\", \"U\", eller \"B\" i tekst feltet uten hermetegn (\"), kun et symbol";
     }
 }
