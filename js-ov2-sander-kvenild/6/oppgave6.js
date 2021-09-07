@@ -7,6 +7,7 @@ function run() {
         distance = document.getElementById("distance").value,
         output = document.getElementById("output");
 
+    // Fanger opp feilkilder
     if (age == "") {
         output.textContent = "Venligst skriv in alder"
         return
@@ -15,6 +16,8 @@ function run() {
         output.textContent = "Venligst skriv in lengde"
         return
     }
+
+    // Sjekker alder
     if (age <= 12) {
         output.textContent = mRound(distance * price * 0.5) + " kr";
         return
@@ -23,6 +26,8 @@ function run() {
         output.textContent = mRound(distance * price * 0.8) + " kr";
         return
     }
+
+    // Runder av og skriver svar
     output.textContent = mRound(distance * price) + " kr";
 }
 
