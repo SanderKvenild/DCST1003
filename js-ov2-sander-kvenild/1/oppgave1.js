@@ -10,8 +10,12 @@ function calculate() {
     document.getElementById("sqr").textContent = mRound(inputValue ** 2);
 }
 
-// Rounds to the amount of decimals given by the constant "accuracy"
-// '+' removes trailing zeros
+/**
+ * Rounds to the amount of decimals given by the constant "accuracy"
+ * @param {number} float - To be rounded 
+ * @returns {number} Rounded - Number after rounding
+ */
 function mRound(float) {
+    // '+' removes trailing zeros
     return +float.toFixed(accuracy)
 }
