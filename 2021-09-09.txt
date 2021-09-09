@@ -1,0 +1,37 @@
+Typer
+    Boolean - true/false
+    Number - heltall og desimaltall
+    String - text
+
+    null - Ingen verdi / Den tomme mengden
+    Symbol - 
+    Object - 
+    undefined - Ikke definert
+
+Tall
+    Decimal 12
+    Hex     0xC
+    Oct     0o13
+    Binary  0b1010
+
+    Float
+        0.353
+        2.04E6
+    +Infinity, -Infinity, NaN
+
+Aritmatikk
+    Modulus x % y
+    Eksponent x ** y
+    Inkrement x++   ++x     x = x + 1   x += 1
+    Dekrement x--   --x     x = x - 1   x += 1
+    x = x + y   ==  x += y
+
+Ternær operator (?)
+    var svar = (alder > 18) ? "gammel nok" : "for ung"
+
+Validering
+    Vi tar høyde for at brukere kan bruke programmet "feil"
+
+Untakshåndtering
+    Gjør noe når koden feiler
+    try/catch
