@@ -1,0 +1,52 @@
+Repitisjon
+    Datatyper
+        Boolean
+        Number
+        String
+    Aritmetiske operatorer
+        +   Addisjon
+        -   Subtraksjon
+        *   Multiplikasjon
+        /   Divisjon
+        %   Modulus
+        **  Eksponent
+        ++  Inkrement
+        --  Dekrement
+    Beslutninger
+        if (betingelse1) { program1 }
+        else if (betingelse2) { program2 }
+        else { program3 }
+    Sammenligningsoperatorer
+        ==  Lik
+        !=  Ulik
+        >=  Større eller lik
+        >   Større
+        <   Mindre
+        >=  Mindre eller lik
+    Logiske operatorer
+        &&
+        ||
+        !
+    Nøstede if-settninger (nested if statements)
+    switch/case
+    ternær operatoren
+        x = (Boolean) ? true:false
+    Håndtering av feil
+        Validering av input
+        Unntakshåndtering
+            try/catch
+    Sekvensdiagram - Beslutninger og valg (flow chart)
+    
+Løkker
+    for (i=0; i<5; i++) {
+        code
+    }
+
+    for
+    for/in
+        Styres av teller
+    while
+    do/while
+        Styres av betingelser
+        Kan gå i loop et ubestemt antall ganger
+        do/while kjører minst 1 gang
