@@ -50,3 +50,14 @@ Løkker
         Styres av betingelser
         Kan gå i loop et ubestemt antall ganger
         do/while kjører minst 1 gang
+    
+    break
+        avbryter løkken
+        fortsetter etter løkken
+    continue
+        avbryter en iterasjon av løkken
+        kjører løkken ferdig
+    return
+        avbryter funksjonen
+
+    label (:)
