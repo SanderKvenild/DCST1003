@@ -8,7 +8,7 @@ function run() {
     var outString = "";
     
     // TODO: Replace number 2 with min.value, this breaks the program when min.value >= 2
-    for (let i = 2; i <= max.value; i++) {
+    for (let i = Number(min.value); i <= max.value; i++) {
         console.log(min.value, i);
         outString += i + ", ";
     }
