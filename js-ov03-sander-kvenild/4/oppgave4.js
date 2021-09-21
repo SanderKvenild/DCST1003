@@ -1,6 +1,7 @@
-var output = document.getElementById("output"),
-    outStr = "<table><tr><td>*</td>";
-    
+var output = document.getElementById("output");
+var outStr = "<table><tr><td>*</td>";
+
+// Column labels
 for (var i = 10; i < 20; i++) {
     outStr += "<td><b>" + i + "</b></td>";
 }
