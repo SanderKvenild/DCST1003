@@ -6,13 +6,9 @@ function run() {
     
     // Temp variables
     var outString = "";
-    
-    // TODO: Replace number 2 with min.value, this breaks the program when min.value >= 2
     for (let i = Number(min.value); i <= max.value; i++) {
-        console.log(min.value, i);
         outString += i + ", ";
     }
-    console.log("run()")
     
     // Displaying output
     output.innerText = outString;
