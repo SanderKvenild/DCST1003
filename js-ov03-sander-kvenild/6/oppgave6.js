@@ -3,7 +3,7 @@ var users = ["abc", "def", "ghi"];
 var passwords = ["123", "456", "789"];
 var max_attempts = 3;
 
-// HTML objects
+// HTMLElements
 var output = document.getElementById("output");
 
 // Variables modified by code
