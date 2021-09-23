@@ -20,7 +20,8 @@ function login() {
             attempts = 0;
         } else {
             attempts++;
-            output.innerHTML = "Feil brukernavn eller passord, " + (max_attempts - attempts) + " forsøk igjen.";
+            output.innerHTML = "Feil brukernavn eller passord, " + 
+                (max_attempts - attempts) + " forsøk igjen.";
         }
     } else {
         output.innerHTML = "For mange forsøk!"
