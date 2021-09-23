@@ -11,5 +11,5 @@ function run() {
     }
     
     // Displaying output
-    output.innerText = outString;
+    output.innerText = outString.slice(0,-2);
 }
