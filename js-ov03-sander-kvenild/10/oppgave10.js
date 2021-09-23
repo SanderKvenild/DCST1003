@@ -7,7 +7,7 @@ function primeCheck() {
         input.value < 2 ||                      // false if over 2
         input.value - Math.floor(input.value)   // 0 if integer
     ) {
-        output.innerHTML = input.value + "er ikke et primtall";
+        output.innerHTML = input.value + " er ikke et primtall";
         return;
     }
 
