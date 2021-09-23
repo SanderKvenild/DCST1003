@@ -3,7 +3,8 @@ var array = [];
 var output = document.getElementById("output"); // TODO: make a div for this id
 
 function call() {
-    // TODO: call other functions
+    fillArray();
+    readArrayToWebsite();
 }
 
 function fillArray() {
