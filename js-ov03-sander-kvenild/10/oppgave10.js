@@ -2,14 +2,12 @@ var input = document.getElementById("input");
 var output = document.getElementById("output");
 
 function primeCheck() {
-    // Treating special case "Numbers less than 2"
-    if (input.value < 2) {
+    // Checking for only integers 2 and over
+    if (
+        input.value < 2 ||                      // false if over 2
+        input.value - Math.floor(input.value)   // 0 if integer
+    ) {
         output.innerHTML = input.value + "er ikke et primtall";
-        return;
-    }
-    // Treating special case "floats are not prime"
-    if (input.value - Math.floor(input.value)) {
-        output.innerHTML = input.value + " er ikke et primtall";
         return;
     }
 
