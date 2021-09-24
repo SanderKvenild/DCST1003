@@ -1,3 +1,6 @@
+/*
+*   Oppgave 4
+*/
 var array = [];
 
 function call() {
@@ -13,4 +16,12 @@ function readArrayToWebsite() {
     // TODO: iterate over to add spaces
     var output = document.getElementById("output4"); // TODO: make a div for this id
     output.innerHTML = array;
+}
+
+/*
+*   Oppgave 5
+*/
+function fillArrayMessage() {
+    fillArray();
+    alert(array[array.length-1]);
 }
