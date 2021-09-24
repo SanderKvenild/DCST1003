@@ -6,6 +6,6 @@ function teenager(age) {
 }
 
 function teenCheck() {
-    age = document.getElementById("age").value;
-    document.getElementById("output1").innerHTML = teenager(age)
+    var age = document.getElementById("age").value;
+    document.getElementById("output1").innerHTML = teenager(age);
 }
