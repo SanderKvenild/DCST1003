@@ -1,7 +1,5 @@
 var array = [];
 
-var output = document.getElementById("output"); // TODO: make a div for this id
-
 function call() {
     fillArray();
     readArrayToWebsite();
@@ -13,5 +11,6 @@ function fillArray() {
 
 function readArrayToWebsite() {
     // TODO: iterate over to add spaces
+    var output = document.getElementById("output4"); // TODO: make a div for this id
     output.innerHTML = array;
 }
