@@ -1,5 +1,5 @@
 function teenager(age) {
-    if (Number(age) > 13 && Number(age) < 20) {
+    if (Number(age) >= 13 && Number(age) < 20) {
         return "Du er tenåring";
     }
     return "Du er ikke tenåring";
