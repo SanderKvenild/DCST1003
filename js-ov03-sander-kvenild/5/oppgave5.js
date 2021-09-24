@@ -5,7 +5,6 @@ for (var i = 10; i > 0; i--) {
         output.innerHTML += i + " green bottle, hanging on a wall,<br>";
         output.innerHTML += i + " green bottle, hanging on a wall,<br>";
     } else {
-        // TODO: Rewrite as continue
         output.innerHTML += i + " green bottles, hanging on a wall,<br>";
         output.innerHTML += i + " green bottles, hanging on a wall,<br>";
     }
