@@ -1,3 +1,1 @@
-Det siste tallet er 97, 
-dette er fordi 12+5*17 = 97, 
-Neste tall er 12+5*18 = 102 som er høyere enn 98.
+Det siste tallet er 97, dette er fordi 12 + 5*17 = 97, og neste tall er 12 + 5*18 = 102 som er høyere enn 98.
