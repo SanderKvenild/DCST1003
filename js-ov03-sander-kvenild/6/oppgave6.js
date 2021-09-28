@@ -40,7 +40,6 @@ function check() {
         if (username == users[i] && password == passwords[i]) {
             return i;
         }
-        return 0;
     }
     return 0;
 }
