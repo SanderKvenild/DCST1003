@@ -29,7 +29,6 @@ function largerCheck() {
 /*
     OPPGAVE 3
 */
-// TODO: 2.3 gives float error
 function areaSquare(side) {
     return mRound(side**2, side.length);
 }
@@ -64,9 +63,8 @@ function fillArray() {
 }
 
 function readArrayToWebsite() {
-    // TODO: iterate over to add spaces
-    var output = document.getElementById("output4"); // TODO: make a div for this id
-    output.innerHTML = array;
+    var output = document.getElementById("output4");
+    output.innerHTML = array.join(", ");
 }
 
 /*
