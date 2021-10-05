@@ -12,9 +12,12 @@ function displayAge() {
     numberString = intToString(input.value);
 
     output.innerHTML = "";
+    prefix = "Om " + numberString + " år er "
+    if (input.value < 0) {
+        prefix = "For " + numberString + " år siden var "
+    }
     for (i in names) {
-        output.innerHTML += "Om " + numberString + " år er " + names[i] + 
-            " " + (ages[i] + Number(input.value)) + " år gammel.<br>";
+        output.innerHTML += prefix + names[i] + " " + (ages[i] + Number(input.value)) + " år gammel.<br>";
     }
 }
 
@@ -24,7 +27,7 @@ function displayAge() {
  * @returns String/Int parameter as norwegian word or number if more than 9 or negative
  */
 function intToString(integer) {
-    switch (Number(integer)) {
+    switch (Math.abs(Number(integer))) {
         case 0:
             return "null";
         case 1:
