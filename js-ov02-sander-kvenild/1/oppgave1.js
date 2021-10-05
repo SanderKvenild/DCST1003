@@ -17,5 +17,5 @@ function calculate() {
  */
 function mRound(float) {
     // '+' removes trailing zeros
-    return +float.toFixed(accuracy)
+    return +float.toFixed(accuracy);
 }
