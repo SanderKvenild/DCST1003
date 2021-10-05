@@ -7,4 +7,4 @@ bricks.forEach(element => {
     volumes.push(element[0]*element[1]*element[2]);
 });
 
-output.innerHTML += Math.max(volumes[0], volumes[1], volumes[2], volumes[3]) + " cm.";
+output.innerHTML += Math.max(volumes[0], volumes[1], volumes[2], volumes[3]) + " cm<sup>3</sup>.";
