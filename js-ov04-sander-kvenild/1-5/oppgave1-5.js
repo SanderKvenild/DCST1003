@@ -72,5 +72,5 @@ function readArrayToWebsite() {
 */
 function fillArrayMessage() {
     fillArray();
-    alert(array[array.length-1]);
+    alert(array.slice(-1));
 }
