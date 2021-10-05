@@ -9,8 +9,13 @@ var array = [];
 
 function read() {
     for (const input in inputs) {
-        const element = inputs[input];
-        array.push(element.value);
+        if (Object.hasOwnProperty.call(inputs, input)) {
+            const element = inputs[input];
+            if (element.value == '') {
+                continue;
+            }
+            array.push(element.value);
+        }
     }
     output.innerHTML = array.join(", ")
 }
