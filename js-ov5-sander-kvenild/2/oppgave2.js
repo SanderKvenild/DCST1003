@@ -5,9 +5,9 @@ for(i=1; i<=5; i++) {
 
 var output = document.getElementById("output");
 var inputs = document.getElementsByTagName("input");
-var array = [];
 
 function read() {
+    var array = [];
     for (const input in inputs) {
         if (Object.hasOwnProperty.call(inputs, input)) {
             const element = inputs[input];
