@@ -1,8 +1,8 @@
 var div = document.getElementById("inputs")
-for(i=0; i<5; i++) {
-    div.innerHTML += "<input type=\"text\">"
+for(i=1; i<=5; i++) {
+    div.innerHTML += "Vare " + i + ": <input type=\"text\">"
 }
-
+var output = document.getElementById("output");
 var inputs = document.getElementsByTagName("input");
 var array = [];
 
@@ -14,4 +14,5 @@ function read() {
         }
     }
     console.log(array);
+    output.innerHTML = array.join(", ")
 }
