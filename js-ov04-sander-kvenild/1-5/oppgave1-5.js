@@ -31,12 +31,22 @@ function largerCheck() {
 */
 // TODO: 2.3 gives float error
 function areaSquare(side) {
-    return side**2;
+    return mRound(side**2, side.length);
 }
 
 function sqrArea() {
     var side = document.getElementById("side").value;
     document.getElementById("output3").innerHTML = areaSquare(side);
+}
+
+/**
+ * Rounds to the amount of decimals given by the constant "accuracy"
+ * @param {number} float - To be rounded 
+ * @returns {number} Rounded - Number after rounding
+ */
+ function mRound(float, accuracy) {
+    // '+' removes trailing zeros
+    return +float.toFixed(accuracy);
 }
 
 /*
