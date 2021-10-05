@@ -10,8 +10,12 @@ function displayAge() {
     }
 
     output.innerHTML = "";
+    prefix = "Om " + input.value + " år er "
+    if (input.value < 0) {
+        prefix = "For " + -input.value + " år siden var "
+    }
     for (i in names) {
-        output.innerHTML += "Om " + input.value + " år er " + names[i] + 
+        output.innerHTML += prefix + names[i] + 
             " " + (ages[i] + Number(input.value)) + " år gammel.<br>";
     }
 }
