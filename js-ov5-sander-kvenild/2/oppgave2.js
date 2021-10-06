@@ -1,3 +1,4 @@
+// TODO: Write this directly into HTML document
 var div = document.getElementById("inputs")
 for(i=1; i<=5; i++) {
     div.innerHTML += "Vare " + i + ": <input type=\"text\"><br>"
