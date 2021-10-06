@@ -25,5 +25,11 @@ function read() {
         }
     }
     output.innerHTML = "Varer: " + wares.join(", ") + "<br>" +
-    "Priser: " + prices.join(", ");
+    "Priser: " + prices.join(", ") + "<br>";
+
+    var maxPrice = Math.max(...prices); // ... is the array spread operator, which makes array elements separate parameters
+    var minPrice = Math.min(...prices);
+    
+    output.innerHTML += "Høyeste pris: " + maxPrice + "<br>" +
+        "Laveste pris: " + minPrice;
 }
