@@ -11,20 +11,22 @@ function read() {
     var wares = [];
     var prices = [];
 
-    for (const index in inputs) {
-        if (Object.hasOwnProperty.call(inputs, index)) {
-            const element = inputs[index];
-            if (element.value == '') {
-                continue;
-            }
-
-            if (index % 2 == 0) {
-                wares.push(element.value);
-                continue;
-            }
-            prices.push(Number(element.value));
+    for (input of inputs) {
+        // Treating empty cell
+        if (input.value == '') {
+            continue;
         }
+    
+        // Treating wares column
+        if (input.type != 'number') {
+            wares.push(input.value);
+            continue;
+        }
+
+        // Pushing prices to array
+        prices.push(Number(input.value));
     }
+    
     output.innerHTML = "Varer: " + wares.join(", ") + "<br>" +
     "Priser: " + prices.join(", ") + "<br>" + "<br>";
 
