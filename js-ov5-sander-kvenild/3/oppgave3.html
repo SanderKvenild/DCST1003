@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oppgave 3</title>
+    <link rel="stylesheet" href="https://folk.ntnu.no/sandekv/styles.css">
+
     <style>
         table {
             text-align: center;
@@ -13,14 +15,18 @@
 </head>
 <body>
     <h1>Oppgave 3</h1>
-    <table id="inputs">
-        <tr>
-            <td>Vare</td>
-            <td>Pris</td>
-        </tr>
-    </table>
-    <button onclick="read()">Les inn verdier</button>
-    <div id="output"></div>
+    <div class="layer1">
+        <table name="inputs">
+            <tbody id="inputs">
+                <tr>
+                    <td>Vare</td>
+                    <td>Pris</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="read()">Les inn verdier</button>
+        <div id="output"></div>
+    </div>
 
     <script src="oppgave3.js"></script>
 </body>
