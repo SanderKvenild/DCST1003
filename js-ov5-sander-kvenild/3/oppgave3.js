@@ -44,8 +44,9 @@ function read() {
 }
 
 /**
- * Rounds to the amount of decimals given by the constant "accuracy"
+ * Rounds to the amount of decimals given by the "accuracy" parameter
  * @param {number} float - To be rounded 
+ * @param {accuracy} int - Number of decimals to include in output
  * @returns {number} Rounded - Number after rounding
  */
  function mRound(float, accuracy) {
