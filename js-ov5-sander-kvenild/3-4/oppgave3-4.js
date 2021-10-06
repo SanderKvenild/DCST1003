@@ -11,6 +11,11 @@ function read() {
     var wares = [];
     var prices = [];
 
+function read() {
+    // Inputs
+    wares = [];
+    prices = [];
+
     // Calculated values
     var totalPrice = 0;
     var maxPrice;
