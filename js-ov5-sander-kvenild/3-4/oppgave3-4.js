@@ -88,7 +88,7 @@ function search() {
     
     // Checking for search term not in wares
     if (index == -1) {
-        searchOutput.innerHTML =  "Varen med navn " + searchbox.value + " og tilhørende pris <br>ble ikke funnet i tabellene";
+        searchOutput.innerHTML =  "Varen med navn " + searchbox.value + " og tilhørende pris ble ikke funnet i tabellene";
         return;
     }
     searchOutput.innerHTML = "Varen med navn " + wares[index] + " koster " + prices[index] + " kroner";
