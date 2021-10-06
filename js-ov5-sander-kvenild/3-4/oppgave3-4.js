@@ -1,3 +1,8 @@
+/*
+    OPPGAVE 3
+*/
+
+// TODO: Consider hardcoding this in HTML
 var div = document.getElementById("inputs")
 for(i=1; i<=5; i++) {
     div.innerHTML += "<tr><td><input type=\"text\"></td><td><input type=\"number\"></td></tr>"
@@ -6,10 +11,8 @@ for(i=1; i<=5; i++) {
 var output = document.getElementById("output");
 var inputs = document.getElementsByTagName("input");
 
-function read() {
-    // Inputs
-    var wares = [];
-    var prices = [];
+var wares = [""];
+var prices = [];
 
 function read() {
     // Inputs
@@ -69,4 +72,24 @@ function read() {
  function mRound(float, accuracy) {
     // '+' removes trailing zeros
     return +float.toFixed(accuracy);
+}
+
+/*
+    OPPGAVE 4
+*/
+
+function search() {
+    var searchbox = document.getElementById("searchbox");
+    var searchOutput = document.getElementById("searchOutput");
+    
+    const equalsSearchbox = (element) => element.toUpperCase() == searchbox.value.toUpperCase();
+
+    var index = wares.findIndex(equalsSearchbox);
+    
+    // Checking for search term not in wares
+    if (index == -1) {
+        searchOutput.innerHTML =  "Varen med navn " + searchbox.value + " og tilhørende pris <br>ble ikke funnet i tabellene";
+        return;
+    }
+    searchOutput.innerHTML = "Varen med navn " + wares[index] + " koster " + prices[index] + " kroner";
 }
