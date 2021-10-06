@@ -79,17 +79,23 @@ function read() {
 */
 
 function search() {
+    // HTML objects
     var searchbox = document.getElementById("searchbox");
     var searchOutput = document.getElementById("searchOutput");
     
+    // Calculated values
+    var index;
+    
+    // Finding index of search term in wares
     const equalsSearchbox = (element) => element.toUpperCase() == searchbox.value.toUpperCase();
-
-    var index = wares.findIndex(equalsSearchbox);
+    index = wares.findIndex(equalsSearchbox);
     
     // Checking for search term not in wares
     if (index == -1) {
         searchOutput.innerHTML =  "Varen med navn " + searchbox.value + " og tilhørende pris ble ikke funnet i tabellene";
         return;
     }
+
+    // Writing the answer to HTML
     searchOutput.innerHTML = "Varen med navn " + wares[index] + " koster " + prices[index] + " kroner";
 }
