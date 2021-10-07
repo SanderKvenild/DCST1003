@@ -25,7 +25,7 @@ function display() {
     outputText += "</tr>";
 
     for (var i = 0; i < 10; i++) {
-        outputText += "<tr><td><b>" + i + "</b></td>";
+        outputText += "<tr><td><b>" + (i + 1) + "</b></td>";
         for (var j = 0; j < 10; j++) {
             outputText += "<td>" + divisionTable[i][j] + "</td>";
         }
