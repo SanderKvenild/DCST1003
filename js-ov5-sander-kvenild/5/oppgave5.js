@@ -1,4 +1,4 @@
-var divisionTable = [];
+var DIVISJONStabellen = [];
 var output = document.getElementById("output");
 
 calculate();
@@ -10,10 +10,10 @@ function calculate() {
         for (var j = 1; j <= 10; j++) {
             row.push(mRound(i/j, 4));
         }
-        divisionTable.push(row);
+        DIVISJONStabellen.push(row);
     }
     
-    console.log(divisionTable);
+    console.log(DIVISJONStabellen);
 }
 
 function display() {
@@ -27,7 +27,7 @@ function display() {
     for (var i = 0; i < 10; i++) {
         outputText += "<tr><td><b>" + (i + 1) + "</b></td>";
         for (var j = 0; j < 10; j++) {
-            outputText += "<td>" + divisionTable[i][j] + "</td>";
+            outputText += "<td>" + DIVISJONStabellen[i][j] + "</td>";
         }
         outputText += "</tr>";
     }
