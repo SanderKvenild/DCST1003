@@ -1,9 +1,6 @@
 var PLUSStabell = [];
 var output = document.getElementById("output");
 
-calculatePlus();
-displayPlus();
-
 function calculatePlus() {
     // Looping rows
     for (var i = 0; i < 10; i++) {

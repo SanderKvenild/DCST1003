@@ -1,9 +1,6 @@
 var DIVISJONStabellen = [];
 var output = document.getElementById("output");
 
-calculate();
-display();
-
 function calculate() {
     // Looping rows
     for (var i = 1; i <= 10; i++) {
