@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        body {
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Knapp</button>
+    <script>
+        var lipsum = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam at, fugit neque rerum quae praesentium itaque nisi doloribus ullam mollitia nemo doloremque consequuntur quaerat, error eligendi voluptatum architecto accusantium totam?"
+        i = 0;
+        setTimeout(() => {
+            console.log("3 sekunder etter refresh!");
+        }, 3000);
+
+        setInterval(() => {
+            i++;
+            console.log("Det har gått " + i + " sekund");
+        }, 1000);
+    </script>
+</body>
+</html>

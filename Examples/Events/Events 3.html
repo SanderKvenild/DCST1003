@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        body {
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Knapp</button>
+    
+    <script>
+        let button = document.getElementById("button");
+        button.onclick = function() {
+            document.body.style.backgroundColor = rgbString(Math.random()*256, Math.random()*256, Math.random()*256);
+        }
+
+        function rgbString(Red, Green, Blue) {
+            return "rgb(" + Red + "," + Green + "," + Blue + ")"
+        }
+
+        document.body.onmousemove = function(event) {
+            console.log(event.clientX/4, event.clientY/2);
+            document.body.style.backgroundColor = rgbString(event.clientX/4, 128, event.clientY/2);
+        }
+    </script>
+</body>
+</html>
