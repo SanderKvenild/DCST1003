@@ -1,6 +1,8 @@
 calculateDivision();
 calculatePlus();
 
+displayPlus();
+
 var form = document.querySelector("form");
 
 form.addEventListener("submit", (event) => {
