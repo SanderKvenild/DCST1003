@@ -1,7 +1,7 @@
 var DIVISJONStabellen = [];
 var output = document.getElementById("output");
 
-function calculate() {
+function calculateDivision() {
     // Looping rows
     for (var i = 1; i <= 10; i++) {
         var row = [];
@@ -15,7 +15,7 @@ function calculate() {
     }
 }
 
-function display() {
+function displayDivision() {
     // Top left element
     outputText = "<tr><td><b>/</b></td>";
 
