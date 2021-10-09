@@ -2,12 +2,6 @@
     OPPGAVE 3
 */
 
-// TODO: Consider hardcoding this in HTML
-var div = document.getElementById("inputs")
-for(i=1; i<=5; i++) {
-    div.innerHTML += "<tr><td><input type=\"text\"></td><td><input type=\"number\"></td></tr>"
-}
-
 var output = document.getElementById("output");
 var inputs = document.getElementsByTagName("input");
 
