@@ -8,7 +8,7 @@ function calculateDivision() {
 
         // Looping columns
         for (var j = 1; j <= 10; j++) {
-            row.push(mRound(i/j, 4));
+            row.push(mRound(i/j, 2));
         }
 
         DIVISJONStabellen.push(row);
