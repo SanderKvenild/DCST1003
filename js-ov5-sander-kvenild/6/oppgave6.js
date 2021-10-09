@@ -37,7 +37,7 @@ function displayPlus() {
     }
 
     // Writing output to document
-    output.innerHTML += outputText;
+    output.innerHTML = outputText;
 }
 
 /**
