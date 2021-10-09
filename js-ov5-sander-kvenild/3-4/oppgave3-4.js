@@ -20,7 +20,7 @@ function read() {
     var averagePrice;
 
     // TODO: Do something about one empty and one filled cell in a row
-    for (input of inputs) {
+    for (const input of inputs) {
         // Treating empty cell
         if (input.value == '') {
             continue;
