@@ -33,7 +33,19 @@
         if (distance < 100 && button.style.visibility == 'hidden') {
           button.style.visibility = 'visible';
         }
-      };
+      }
+      
+      button.onclick = () => {
+        points += 1;
+        pointsText.innerText = points;
+
+        // Hide button
+        button.style.visibility = 'hidden';
+        // Move button to a random position
+        button.style.left = Math.floor(Math.random() * 500) + 'px';
+        button.style.top = Math.floor(Math.random() * 500) + 'px';
+      }
+      ;
     </script>
   </body>
 </html>
