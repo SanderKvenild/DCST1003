@@ -16,4 +16,4 @@ form.addEventListener("submit", (event) => {
         }
         displayDivision();
     }
-}, false)
+}, false);
