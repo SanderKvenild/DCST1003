@@ -4,31 +4,63 @@
 
 var output = document.getElementById("output");
 var inputs = document.getElementsByTagName("input");
+var errorDiv = document.getElementById("error");
 
-var wares = [""];
+var items = [""];
 var prices = [];
 
+/**
+ * Reads values of tag input into arrays items and prices, depending on type of input used
+ */
 function read() {
-    // Inputs
-    wares = [];
-    prices = [];
+    // Error message
+    errorDiv.innerHTML = ""
 
+    // Parsed inputs
+    items = [];
+    prices = [];
+    
     // Calculated values
     var totalPrice = 0;
     var maxPrice;
     var minPrice;
     var averagePrice;
+    
+    // Temporary values
+    var skipFlag = false;
 
-    // TODO: Do something about one empty and one filled cell in a row
+    // Iterating over values in table
     for (const input of inputs) {
+        // ignoring searchbox
+        if (input.type == "search") {
+            continue;
+        }
+
+        // skipping if flag is set
+        if (skipFlag) {
+            skipFlag = false;
+            continue;
+        }
+
         // Treating empty cell
         if (input.value == '') {
+            console.log(input.type);
+            errorDiv.innerHTML = "En eller flere felt mangler innhold, disse radene ble hoppet over!";
+
+            // Removing item if price is not found
+            if (input.type == 'number') {
+                items.pop();
+                continue;
+            }
+
+            // Skipping price if item is not found
+            skipFlag = true;
             continue;
         }
     
-        // Treating wares column
+        // Treating items column
         if (input.type != 'number') {
-            wares.push(input.value);
+            items.push(input.value);
             continue;
         }
 
@@ -43,11 +75,11 @@ function read() {
 
     maxPrice = Math.max(...prices); // ... is the array spread operator, which makes array elements separate parameters
     minPrice = Math.min(...prices);
-    averagePrice = mRound(totalPrice / prices.length, 2);  // TODO: Consider optimizing prices.length to 5, and requiring all rows to be filled by user
+    averagePrice = mRound(totalPrice / prices.length, 2);
 
     // Writing to document
     output.innerHTML = 
-        "Varer: " + wares.join(", ") + "<br>" +
+        "Varer: " + items.join(", ") + "<br>" +
         "Priser: " + prices.join(", ") + "<br>" + 
         "<br>" +
         "Høyeste pris: " + maxPrice + "<br>" +
@@ -72,6 +104,10 @@ function read() {
     OPPGAVE 4
 */
 
+/**
+ * Checks if value of tag with id="searchbox" in "items" array, if so it displays price in tag with id=searchOutput
+ * @returns {void}
+ */
 function search() {
     // HTML objects
     var searchbox = document.getElementById("searchbox");
@@ -82,7 +118,7 @@ function search() {
     
     // Finding index of search term in wares
     const equalsSearchbox = (element) => element.toUpperCase() == searchbox.value.toUpperCase();
-    index = wares.findIndex(equalsSearchbox);
+    index = items.findIndex(equalsSearchbox);
     
     // Checking for search term not in wares
     if (index == -1) {
@@ -91,5 +127,5 @@ function search() {
     }
 
     // Writing the answer to HTML
-    searchOutput.innerHTML = "Varen med navn " + wares[index] + " koster " + prices[index] + " kroner";
+    searchOutput.innerHTML = "Varen med navn " + items[index] + " koster " + prices[index] + " kroner";
 }
