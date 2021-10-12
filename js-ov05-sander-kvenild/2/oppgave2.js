@@ -3,14 +3,11 @@ var inputs = document.getElementsByTagName("input");
 
 function read() {
     var array = [];
-    for (const input in inputs) {
-        if (Object.hasOwnProperty.call(inputs, input)) {
-            const element = inputs[input];
-            if (element.value == '') {
-                continue;
-            }
-            array.push(element.value);
+    for (const input of inputs) {
+        if (input.value == '') {
+            continue;
         }
+        array.push(input.value);
     }
     output.innerHTML = array.join(", ")
 }
