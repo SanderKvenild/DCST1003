@@ -14,7 +14,7 @@ var prices = [];
  */
 function read() {
     // Error message
-    errorDiv.innerHTML = ""
+    errorDiv.innerHTML = "";
 
     // Parsed inputs
     items = [];

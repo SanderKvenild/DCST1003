@@ -9,5 +9,5 @@ function read() {
         }
         array.push(input.value);
     }
-    output.innerHTML = array.join(", ")
+    output.innerHTML = array.join(", ");
 }
