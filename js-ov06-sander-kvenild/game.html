@@ -1,4 +1,13 @@
 <html>
+  <head>
+    <style>
+      #gameArea {
+        border: 2px solid black;
+        height: 500px;
+        width: 500px;
+      }
+    </style>
+  </head>
   <body>
     <h1>Find the hidden button and click it!</h1>
     <p><b>How many buttons can you click in 15 seconds?</b></p>
@@ -6,20 +15,21 @@
     <div id="timerText">15</div>
     <div>Points:</div>
     <div id="pointsText"></div>
-    <button id="button">Click me</button>
+    <div id="gameArea">
+      <button id="button">Click me</button>
+    </div>
     <script>
       let points = 0;
       let pointsText = document.getElementById('pointsText');
       let timerText = document.getElementById('timerText');
       pointsText.innerText = points;
+      let gameArea = document.getElementById("gameArea");
 
       let button = document.getElementById('button');
       button.style.position = 'absolute';
       // Hide button
       button.style.visibility = 'hidden';
-      // Move button to a random position
-      button.style.left = Math.floor(Math.random() * 500) + 'px';
-      button.style.top = Math.floor(Math.random() * 500) + 'px';
+      moveButton();
 
       // Show button when the mouse cursor is close to it
       window.onmousemove = (event) => {
@@ -45,8 +55,7 @@
         // Hide button
         button.style.visibility = 'hidden';
         // Move button to a random position
-        button.style.left = Math.floor(Math.random() * 500) + 'px';
-        button.style.top = Math.floor(Math.random() * 500) + 'px';
+        moveButton();
       };
 
       setInterval(() => {
@@ -59,6 +68,14 @@
           pointsText.innerText = points;
         }
       }, 1000);
+
+      function moveButton() {
+        let bounds = gameArea.getBoundingClientRect()
+        
+        // Move button to a random position
+        button.style.left = Math.floor(Math.random() * 500 + bounds.left) + 'px';
+        button.style.top = Math.floor(Math.random() * 500 + bounds.top) + 'px';
+      }
     </script>
   </body>
 </html>
