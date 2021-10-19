@@ -3,26 +3,24 @@
     <style>
       #gameArea {
         border: 2px solid black;
-        height: 500px;
-        width: 500px;
+        height: 550px;
+        width: 550px;
       }
     </style>
   </head>
   <body>
     <h1>Find the hidden button and click it!</h1>
     <p><b>How many buttons can you click in 15 seconds?</b></p>
-    <div>Timer:</div>
-    <div id="timerText">15</div>
-    <div>Points:</div>
-    <div id="pointsText"></div>
+    <div id="timer">Timer: 15</div>
+    <div id="points">Points: 0</div>
     <div id="gameArea">
       <button id="button">Click me</button>
     </div>
     <script>
       let points = 0;
-      let pointsText = document.getElementById('pointsText');
-      let timerText = document.getElementById('timerText');
-      pointsText.innerText = points;
+      let timer = 15;
+      let pointsText = document.getElementById('points');
+      let timerText = document.getElementById('timer');
       let gameArea = document.getElementById("gameArea");
 
       let button = document.getElementById('button');
@@ -50,7 +48,7 @@
       
       button.onclick = () => {
         points += 1;
-        pointsText.innerText = points;
+        pointsText.innerText = "Points: " + points;
 
         // Hide button
         button.style.visibility = 'hidden';
@@ -59,13 +57,15 @@
       };
 
       setInterval(() => {
-        timerText.innerText -= 1;
+        timer--;
+        timerText.innerText = "Timer: " + timer;
 
-        if (timerText.innerText < '0') {
+        if (timer < 0) {
           alert("Du fikk " + points + " poeng!");
-          timerText.innerText = 15;
+          timer = 15;
+          timerText.innerText = "Timer: " + timer;
           points = 0;
-          pointsText.innerText = points;
+          pointsText.innerText = "Points: 0";
         }
       }, 1000);
 
