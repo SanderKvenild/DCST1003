@@ -26,7 +26,7 @@ for (let i = 0; i < 600; i++) {
 
   square.onclick = (event) => {
     // Set color of square to selected color
-    square.style.backgroundColor = colors[colorSelection.value];
+    square.style.backgroundColor = colorSelection.value;
   };
 
   // Add square as child to drawingBoard element
@@ -36,6 +36,7 @@ for (let i = 0; i < 600; i++) {
 }
 
 drawingBoard.ondrag = (event) => {
+  // x and y relative to drawingBoard
   let x = event.clientX - drawingBoard.offsetLeft;
   let y = event.clientY - drawingBoard.offsetTop;
 
@@ -48,7 +49,7 @@ drawingBoard.ondrag = (event) => {
 
   // 1 in y direction = 30 squares over
   let squareNumber = 30 * squareY + squareX
-  squares[squareNumber].style.backgroundColor = colors[colorSelection.value];
+  squares[squareNumber].style.backgroundColor = colorSelection.value;
 }
 
 clearButton.onclick = () => {
@@ -59,6 +60,6 @@ clearButton.onclick = () => {
 
 fillButton.onclick = () => {
   for (const square of squares) {
-    square.style.backgroundColor = colors[colorSelection.value];
+    square.style.backgroundColor = colorSelection.value;
   };
 }
