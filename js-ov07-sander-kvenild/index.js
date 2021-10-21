@@ -1,7 +1,8 @@
 // Retrieve the needed HTML elements:
 let colorSelection = document.getElementById('colorSelection');
 let drawingBoard = document.getElementById('drawingBoard');
-let clearButton = document.getElementById('clearButton')
+let clearButton = document.getElementById('clearButton');
+let fillButton = document.getElementById('fillButton');
 
 // Associate color names to RGB values
 let colors = {
@@ -38,4 +39,10 @@ clearButton.onclick = () => {
     for (const square of squares) {
         square.style.backgroundColor = colors.White;
     };
+}
+
+fillButton.onclick = () => {
+  for (const square of squares) {
+    square.style.backgroundColor = colors[colorSelection.value];
+  };
 }
