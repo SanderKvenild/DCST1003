@@ -43,6 +43,9 @@ drawingBoard.ondrag = (event) => {
   let squareX = Math.floor(x / 20);
   let squareY = Math.floor(y / 20);
 
+  // Make sure square exists before painting
+  if (squareX < 0 || squareX > 29 || squareY < 0|| squareY > 19) return;
+
   // 1 in y direction = 30 squares over
   let squareNumber = 30 * squareY + squareX
   squares[squareNumber].style.backgroundColor = colors[colorSelection.value];
