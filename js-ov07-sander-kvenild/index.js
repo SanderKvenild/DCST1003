@@ -35,6 +35,19 @@ for (let i = 0; i < 600; i++) {
   squares.push(square);
 }
 
+drawingBoard.ondrag = (event) => {
+  let x = event.clientX - drawingBoard.offsetLeft;
+  let y = event.clientY - drawingBoard.offsetTop;
+
+  // Find which square was dragged over
+  let squareX = Math.floor(x / 20);
+  let squareY = Math.floor(y / 20);
+
+  // 1 in y direction = 30 squares over
+  let squareNumber = 30 * squareY + squareX
+  squares[squareNumber].style.backgroundColor = colors[colorSelection.value];
+}
+
 clearButton.onclick = () => {
     for (const square of squares) {
         square.style.backgroundColor = colors.White;
