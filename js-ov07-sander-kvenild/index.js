@@ -29,7 +29,7 @@ for (let i = 0; i < 600; i++) {
 
   square.onclick = (event) => {
     // Set color of square to selected color
-    square.style.backgroundColor = colorSelection.value;
+    drawSquare(i, colorSelection.value);
   };
 
   // Add square as child to drawingBoard element
@@ -42,6 +42,7 @@ brushSize.onchange = () => {
   brushSizeLabel.innerText = brushSize.value;
 }
 
+// TODO: Consider changing to onmousemove
 drawingBoard.ondrag = (event) => {
   // x and y relative to drawingBoard
   let x = event.clientX - drawingBoard.offsetLeft;
@@ -56,7 +57,7 @@ drawingBoard.ondrag = (event) => {
 
   // 1 in y direction = 30 squares over
   let squareNumber = 30 * squareY + squareX
-  squares[squareNumber].style.backgroundColor = colorSelection.value;
+  drawSquare(squareNumber, colorSelection.value)
 }
 
 clearButton.onclick = () => {
@@ -69,4 +70,21 @@ fillButton.onclick = () => {
   for (const square of squares) {
     square.style.backgroundColor = colorSelection.value;
   };
+}
+
+// TODO: improve readability
+function drawSquare (index, color) {
+  let size = brushSize.value - 1;
+  for (let y = -size; y < size; y++) {
+    // Limiting y to drawingBoard
+    if (index + y * 30 < 0 || index + y * 30 > 599) continue
+
+    for (let x = -size; x < size; x++) {
+      // Limiting x to drawingBoard
+      if (index%30 + x < 0 || index%30 + x > 29) continue;
+
+      squares[index + y * 30 + x].style.backgroundColor = color;
+    }
+  }
+  squares[index].style.backgroundColor = color;
 }
