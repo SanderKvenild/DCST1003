@@ -1,10 +1,13 @@
 // Retrieve the needed HTML elements:
 let colorSelection = document.getElementById('colorSelection');
+let brushSize = document.getElementById('brushSize');
+let brushSizeLabel = document.getElementById('brushSizeLabel')
 let drawingBoard = document.getElementById('drawingBoard');
 let clearButton = document.getElementById('clearButton');
 let fillButton = document.getElementById('fillButton');
 
 // Associate color names to RGB values
+// TODO: Hard code white where it is used
 let colors = {
   Red: 'rgb(255, 0, 0)',
   White: 'rgb(255, 255, 255)',
@@ -33,6 +36,10 @@ for (let i = 0; i < 600; i++) {
   drawingBoard.appendChild(square);
   // Add square to squares table
   squares.push(square);
+}
+
+brushSize.onchange = () => {
+  brushSizeLabel.innerText = brushSize.value;
 }
 
 drawingBoard.ondrag = (event) => {
