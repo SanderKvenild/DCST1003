@@ -1,10 +1,13 @@
 // Retrieve the needed HTML elements:
 let colorSelection = document.getElementById('colorSelection');
 let brushSize = document.getElementById('brushSize');
-let brushSizeLabel = document.getElementById('brushSizeLabel')
+let brushSizeLabel = document.getElementById('brushSizeLabel');
 let drawingBoard = document.getElementById('drawingBoard');
 let clearButton = document.getElementById('clearButton');
 let fillButton = document.getElementById('fillButton');
+
+// Global variable
+let mouseDown = false;
 
 // Associate color names to RGB values
 // TODO: Hard code white where it is used
@@ -42,9 +45,20 @@ brushSize.onchange = () => {
   brushSizeLabel.innerText = brushSize.value;
 }
 
-// TODO: Consider changing to onmousemove
-drawingBoard.ondrag = (event) => {
-  // x and y relative to drawingBoard
+drawingBoard.onmousedown = (event) => {
+  mouseDown = true;
+}
+window.onmouseup = (event) => {
+  mouseDown = false;
+}
+window.onmouseleave = (event) => {
+  mouseDown = false;
+}
+drawingBoard.onmousemove = (event) => {
+  if (!mouseDown) {
+    return;
+  }
+
   let x = event.clientX - drawingBoard.offsetLeft;
   let y = event.clientY - drawingBoard.offsetTop;
 
