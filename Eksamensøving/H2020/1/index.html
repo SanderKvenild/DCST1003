@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 1</title>
+</head>
+<body>
+    <h1>Oppgave 1</h1>
+    <form id="form">
+        Lånested:
+        <select name="lånested">
+            <option value="Øya">Øya</option>
+            <option value="Ila">Ila</option>
+            <option value="Korsvika">Korsvika</option>
+            <option value="Munkholmen">Munkholmen</option>
+        </select>
+        Leveringssted:
+        <select name="leveringssted">
+            <option value="Øya">Øya</option>
+            <option value="Ila">Ila</option>
+            <option value="Korsvika">Korsvika</option>
+            <option value="Munkholmen">Munkholmen</option>
+        </select> <br>
+        Leietid fra:
+        <input type="date" name="leietid" id="leietid">
+        til:
+        <input type="date" name="leveringstid" id="leveringstid">
+        <br>
+        Antall båter:
+        <select name="antall" id="antall">
+            <option value=1>1</option>
+            <option value=2>2</option>
+        </select>
+        <br>
+        Båt 1:
+        <select name="type1">
+            <option value="Kano">Kano</option>
+            <option value="Kajak">Kajak</option>
+            <option value="Supboard">Supboard</option>
+        </select>
+        <br>
+        <div id="type2div" hidden>
+            Båt 2:
+            <select name="type2">
+                <option value="Kano">Kano</option>
+                <option value="Kajak">Kajak</option>
+                <option value="Supboard">Supboard</option>
+            </select>
+        </div>
+        Kommentarer:
+        <input type="text" name="kommentar">
+        <br>
+        <button type="submit">Send inn</button>
+    </form>
+    <div id="ordre">
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
